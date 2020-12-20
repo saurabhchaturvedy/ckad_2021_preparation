@@ -12,3 +12,4 @@ Pod,Service v1
 Replica/Deployment apps/v1
 
 kubectl create -f pod-definition.yml
+kubectl describe pod my-pod
