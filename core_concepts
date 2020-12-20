@@ -1,0 +1,12 @@
+kubectl run hello-minikube
+kubectl cluster-info
+kubectl get-nodes
+
+//
+
+
+kubectl run nginx --image nginx (runs a deployment of nginx)
+kubectl get pods
+
+Pod,Service v1
+Replica/Deployment apps/v1
