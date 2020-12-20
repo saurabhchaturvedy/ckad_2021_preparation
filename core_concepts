@@ -10,3 +10,5 @@ kubectl get pods
 
 Pod,Service v1
 Replica/Deployment apps/v1
+
+kubectl create -f pod-definition.yml
