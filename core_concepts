@@ -27,3 +27,19 @@ kubectl get pod <pod-name> -o yaml > pod-definition.yaml
 Then edit the file to make the necessary changes, delete and re-create the pod.
 
 Use the kubectl edit pod <pod-name> command to edit pod properties.
+
+ReplicaController Version : v1
+spec:
+  template:
+  replicas:
+
+ReplicaSet Version : apps/v1
+spec:
+  template:
+  replicas:
+  selector:                  // ReplicaSet can also manage pods that were not created as part of ReplicaSet definition 
+       matchLabels:
+            app-type: front-end
+  
+  kubectl create -f rs.yml
+  kubectl get rs
