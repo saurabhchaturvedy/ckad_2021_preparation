@@ -50,3 +50,31 @@ SCALE REPLICAS
 kubectl replace -f rs-def.yml
 kubectl scale --replicas=6 -f rs-def.yml (This scales up , but does not change the existing value of replicas in the file)
 kubectl scale --replicas=6 rs my-first-rs
+
+Deployments
+============
+When think of deployments , think of upgrading the app when new changes are done & how to do them .
+
+Deployment defition content is same as ReplicaSet except the Kind name .
+
+kubectl get all // lists all created resources
+
+Namespaces
+============
+
+kube-system // namespace for kubernetes related resources
+
+Used for : allocating Quotas
+
+kubectl create namespace test-123 --dry-run -o json
+
+kubectl create namespace test-123 --dry-run -o yaml
+
+accessing a resource in other namespace
+
+db_service.dev.svc.cluster.local
+
+db_service = service we want to access
+dev = namespace
+svc = sub-domain for services
+cluster.local = kubernetes cluster domain
