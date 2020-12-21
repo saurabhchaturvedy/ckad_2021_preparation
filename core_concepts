@@ -8,7 +8,7 @@ kubectl get-nodes
 kubectl run nginx --image nginx (runs a deployment of nginx)
 kubectl get pods
 
-Pod,Service v1
+Pod,Service,Namespace,ReplicationController v1
 Replica/Deployment apps/v1
 
 kubectl create -f pod-definition.yml
@@ -78,3 +78,22 @@ db_service = service we want to access
 dev = namespace
 svc = sub-domain for services
 cluster.local = kubernetes cluster domain
+
+kubectl get pods -n=prod
+
+kubectl config set-context $(kubectl config current-context) -n=dev
+kubectl config set-context --current -n=prod // switch to a different namespace in the cluster
+
+Imperative Commands
+===================
+kubectl run nginx --image=nginx
+kubectl run nginx --image=nginx  --dry-run=client -o yaml  // dry run the kubectl command
+kubectl create deployment nginx --image=nginx --replicas=4
+kubectl scale deployment nginx --replicas=4. // scale a deployment
+kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml // Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
+
+kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml  (This will not use the pods labels as selectors, instead it will assume selectors as app=redis. You cannot pass in selectors as an option. So it does not work very well if your pod has a different label set. So generate the file and modify the selectors before creating the service)
+
+kubectl expose pod nginx --port=80 --name nginx-service --type=NodePort --dry-run=client -o yaml // Create a Service named nginx of type NodePort to expose pod nginx's port 80 on port 30080 on the nodes
+
+kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml  // This will not use the pods labels as selectors
