@@ -1,1 +1,17 @@
+VOLUME
+=======
 
+spec:
+  containers:
+        - image: nginx
+          name: nginx
+          volumeMounts:
+                 - mountPath:
+                   name:
+  
+  
+  volumes:
+      - name: test-volume
+        hostPath:
+              path:
+              type:
