@@ -27,3 +27,15 @@ spec:
         storage: 100Gi
    hostPath:
          path: /opt/var
+         
+
+PERSISTENT VOLUME CLAIMS
+========================
+
+spec:
+  accessModes:
+          - ReadWriteOnce
+  resources:
+      requests:
+          storage: 500Mi
+  
