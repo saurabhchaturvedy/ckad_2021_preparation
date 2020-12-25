@@ -15,3 +15,15 @@ spec:
         hostPath:
               path:
               type:
+
+
+PERSISTENT VOLUMES
+===================
+
+spec:
+   accessModes:
+           - ReadWriteOnce (ReadWriteOnce,ReadWriteMany,ReadOnlyMany)
+   capacity:
+        storage: 100Gi
+   hostPath:
+         path: /opt/var
