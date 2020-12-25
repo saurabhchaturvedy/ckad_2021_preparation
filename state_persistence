@@ -39,3 +39,13 @@ spec:
       requests:
           storage: 500Mi
   
+  
+Claiming the PVC in a Pod
+
+ spec:
+   containers:
+   
+   volumes:
+      - name: test-volume
+        persistentVolumeClaim:
+                      claimName: my-pvc
