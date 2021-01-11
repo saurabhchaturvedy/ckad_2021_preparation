@@ -49,3 +49,9 @@ Claiming the PVC in a Pod
       - name: test-volume
         persistentVolumeClaim:
                       claimName: my-pvc
+                      
+                      
+Command to log inside a container
+=================================
+
+kubectl exec -ti webapp sh
