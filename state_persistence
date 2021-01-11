@@ -55,3 +55,4 @@ Command to log inside a container
 =================================
 
 kubectl exec -ti webapp sh
+come out of a container --  exit
