@@ -36,4 +36,17 @@ Getting values from a secret
 envFrom:
    secretKeyRef:
    
+Create config-map using kubectl command
+========================================
+
+kubectl create cm \ app-config --from-literal=APP_COLOR=blue
+kubectl create cm \ app-config --from-file=app_config.properties
+
+Create config-map definition file
+==================================
+
+data:
+  APP_COLOR: blue
+  APP_MODE: prod
+   
 
