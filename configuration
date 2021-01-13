@@ -34,6 +34,12 @@ env:
       configMapKeyRef:
             name: app-config
             key: APP_COLOR
+=====================================
+
+volumes:
+  - name: app-config-volume
+    configMap:
+       name: app-config
 =========================
 
 Getting values from a config-map
