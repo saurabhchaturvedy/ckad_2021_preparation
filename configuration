@@ -86,6 +86,19 @@ Get a single key value from a ConfigMap
 ========================================
 
 env
- -secretKeyRef:
+-name
+ valueFrom:
+   secretKeyRef:
             name:
             key:
+
+Get a secret from a file in a volume
+=========================================
+
+volumes
+  - name: app-secret-volume
+    secret:
+      secretName: app-secret
+    
+
+volumes
