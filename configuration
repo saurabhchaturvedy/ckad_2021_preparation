@@ -100,3 +100,8 @@ volumes
     secret:
       secretName: app-secret
 
+Kubernetes security settings
+==============================
+
+if settings defined on pod level ====> they propagate to all the containers within it
+if settings on both pod and container =====> container setting overrides the pod settings
