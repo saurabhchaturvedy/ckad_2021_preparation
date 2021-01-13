@@ -1,1 +1,10 @@
+CMD is used to pass both executable and parameter like ["sleep","5"]
 
+docker run ubuntu-sleeper sleep 5 // in case of CMD we need to pass both 
+
+ENTRYPOINT point is used to define base command/executable in file and append params to it
+
+docker run ubuntu-sleeper 10
+
+if you are using entrypoint and don't pass any params , the call will fail... docker run ubuntu-sleeper .
+In such cases combination of ENTRYPOINT and CMD both are used , to provide a default value for the command , so that command doesn't fails .
