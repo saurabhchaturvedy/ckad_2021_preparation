@@ -17,3 +17,23 @@ CMD ======= args["10"] kubernetes // overrides CMD instruction in a docker file 
 (List entries in command should be in double-quotes)
 
 ENTRYPOINT ========== command["sleep2.0"] kubernetes // overrides entrypoint
+
+spec:
+  containers:
+  
+  env:
+   - name:
+     value:
+=========================
+
+Getting values from a config-map
+
+envFrom:
+   configMapKeyRef:
+   
+Getting values from a secret
+
+envFrom:
+   secretKeyRef:
+   
+
