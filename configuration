@@ -24,13 +24,24 @@ spec:
   env:
    - name:
      value:
+     
+single env key from config-map
+==============================
+
+env:
+ - name:
+   valueFrom:
+      configMapKeyRef:
+            name: app-config
+            key: APP_COLOR
 =========================
 
 Getting values from a config-map
 
 envFrom:
-   configMapKeyRef:
-   
+   - configMapRef:
+          name: app-config
+         
 Getting values from a secret
 
 envFrom:
