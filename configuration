@@ -13,4 +13,7 @@ docker run --entrypoint sleeper2.0 ubuntu-sleeper 10 // command to change entry-
 
 
 CMD ======= args["10"] kubernetes // overrides CMD instruction in a docker file using which image we are running the container 
+
+(List entries in command should be in double-quotes)
+
 ENTRYPOINT ========== command["sleep2.0"] kubernetes // overrides entrypoint
