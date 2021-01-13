@@ -86,8 +86,8 @@ Get a single key value from a ConfigMap
 ========================================
 
 env
--name
- valueFrom:
+- name
+  valueFrom:
    secretKeyRef:
             name:
             key:
