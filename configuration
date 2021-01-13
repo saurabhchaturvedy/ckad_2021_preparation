@@ -67,3 +67,25 @@ data:
   APP_MODE: prod
    
 
+Secrets
+==================
+
+echo -n 'text' | base64  // convert to base-64
+
+echo -n 'encoded-text' | base64 --decode. // convert back to plain-text
+
+
+Get values from a secret in a pod
+=================================
+
+envFrom:
+   - secretRef:
+           name: 
+           
+Get a single key value from a ConfigMap
+========================================
+
+env
+ -secretKeyRef:
+            name:
+            key:
