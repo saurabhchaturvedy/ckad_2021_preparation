@@ -99,6 +99,4 @@ volumes
   - name: app-secret-volume
     secret:
       secretName: app-secret
-    
 
-volumes
