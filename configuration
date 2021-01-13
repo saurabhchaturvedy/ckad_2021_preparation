@@ -105,3 +105,8 @@ Kubernetes security settings
 
 if settings defined on pod level ====> they propagate to all the containers within it
 if settings on both pod and container =====> container setting overrides the pod settings
+
+securityContext:
+          runAsUser:
+          capabilities:                // capabilities are only supported at container level and not at the pod level
+                add: ["MAC_ADMIN"] 
