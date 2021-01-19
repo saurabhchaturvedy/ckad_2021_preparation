@@ -141,3 +141,10 @@ spec:
         
 if a pod uses more cpu than requested it gets throttled 
 if a pod uses more memory than requested , it doesn't get throttled , but gets terminated after some time
+
+
+TAINTS & TOLERATIONS.      (Pod to Node relationship)
+=========================
+
+
+
