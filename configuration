@@ -189,3 +189,5 @@ containers
 
 nodeSelector:
        size: large
+       
+kubectl label nodes node01 size=large
