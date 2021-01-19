@@ -200,3 +200,21 @@ NOT small node
 
 For this we have the NodeAffinity  (Ensures Pods are hosted on particular nodes)
 =============================================
+
+
+affinity:
+   nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpresions:
+                - key :  
+                  operator :  (Exists,In,NotIn)
+                  values:
+                  -
+
+
+NodeAffinityTypes
+===================
+
+requiredDuringSchedulingIgnoredDuringExecution
+preferredDuringSchedulingIgnoredDuringExecution
