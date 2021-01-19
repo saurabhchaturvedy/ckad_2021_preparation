@@ -149,3 +149,12 @@ TAINTS & TOLERATIONS.      (Pod to Node relationship)
 
 * Taint - is like we apply odomos cream to repel mosquitos from biting us .  (Us -> Node , Mosquito -> Pod) .
 * Tolerations - is like we still get bitten by some of the mosquitos as they are tolerant to the odomos cream smell .
+
+kubectl taint nodes node01  app=blue:(taint-effect=NoScheule,PreferNoSchedule,NoExecute) (Taint Effect : what happens to the pods that do not tolerate this taint ?)
+
+NoSchedule - Don't schedule at all
+
+PreferNoSchedule - System will try not to schedule , but is not guaranteed !!
+
+NoExecute - Existing pods on node with such taint will be evicted , and no new pods with that taint will be welcomed .
+
