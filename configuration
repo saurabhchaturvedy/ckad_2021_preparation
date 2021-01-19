@@ -125,3 +125,12 @@ spec:
   ------
   
   automountServiceAccountToken: false (to avoid setting default service account token)
+  
+  
+  Resource requirements
+  =====================
+  
+  resources:
+      requests:
+         memory:
+         cpu:
