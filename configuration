@@ -171,3 +171,7 @@ spec:
        value: "blue"
        effect: "NoSchedule"
 
+
+
+* Taints and tolerations -- only provide a node with power to accept pods only with a certain kind of taint .  That does not restrict the pod with toleration 
+to that particular node to not get placed at any other node then the one with taint . So that scenario is still very much possible !!
