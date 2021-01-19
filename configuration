@@ -185,5 +185,7 @@ NodeSeclector
 
 Controls Pod placement on nodes by filtering upon the labels assigned to the nodes .
 
+containers
+
 nodeSelector:
        size: large
