@@ -158,3 +158,16 @@ PreferNoSchedule - System will try not to schedule , but is not guaranteed !!
 
 NoExecute - Existing pods on node with such taint will be evicted , and no new pods with that taint will be welcomed .
 
+
+tolerations:
+============
+
+spec:
+  containers:
+  
+  tolerations:
+     - key: "app"
+       operator: "Equal"
+       value: "blue"
+       effect: "NoSchedule"
+
