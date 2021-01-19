@@ -110,3 +110,18 @@ securityContext:
           runAsUser:
           capabilities:                // capabilities are only supported at container level and not at the pod level
                 add: ["MAC_ADMIN"] 
+
+Kubernetes service account
+============================
+
+k get sa
+k describe sa
+
+spec:
+  containers:
+  
+  serviceAccount:
+  
+  ------
+  
+  automountServiceAccountToken: false (to avoid setting default service account token)
