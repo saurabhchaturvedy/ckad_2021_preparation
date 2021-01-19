@@ -191,3 +191,12 @@ nodeSelector:
        size: large
        
 kubectl label nodes node01 size=large
+
+
+But NodeSelector cannot help control pod placement for below criteria :
+
+Place on Large or Small Node
+NOT small node
+
+For this we have the NodeAffinity 
+=============================================
