@@ -147,4 +147,5 @@ TAINTS & TOLERATIONS.      (Pod to Node relationship)
 =========================
 
 
-Taint - is like we apply odomos cream to repel mosquitos from biting us .  (Us -> Node , Mosquito -> Pod)
+Taint - is like we apply odomos cream to repel mosquitos from biting us .  (Us -> Node , Mosquito -> Pod) .
+Tolerations - is like we still get bitten by some of the mosquitos as they are tolerant to the odomos cream smell .
