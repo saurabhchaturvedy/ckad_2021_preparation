@@ -218,3 +218,11 @@ NodeAffinityTypes
 
 requiredDuringSchedulingIgnoredDuringExecution
 preferredDuringSchedulingIgnoredDuringExecution
+
+
+Multi-container Pods
+======================
+
+SideCar - Logging Agent
+Adapter - Log format processing agent 
+Ambassador - Externalize routing logic as per correct DB per env 
