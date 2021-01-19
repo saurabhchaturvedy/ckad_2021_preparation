@@ -198,5 +198,5 @@ But NodeSelector cannot help control pod placement for below criteria :
 Place on Large or Small Node
 NOT small node
 
-For this we have the NodeAffinity 
+For this we have the NodeAffinity  (Ensures Pods are hosted on particular nodes)
 =============================================
