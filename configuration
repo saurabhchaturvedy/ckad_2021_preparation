@@ -178,3 +178,12 @@ to that particular node to not get placed at any other node then the one with ta
 
 
 View Taint on a node -- kubectl describe node node01 | grep Taint
+
+
+NodeSeclector
+==============
+
+Controls Pod placement on nodes by filtering upon the labels assigned to the nodes .
+
+nodeSelector:
+       size: large
