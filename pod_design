@@ -27,9 +27,13 @@ Rolling Updates & Rollback
 
 kubectl rollout status my-deployment   // check the status of the rollout of your deployment 
 
+
 To check the history of rollouts of a deployment we need :
 
 kubectl rollout history my-deployment
+
+
+kubectl rollout history deployment nginx --revision=1
 
 
 * There are generally 2 Deployment strategy :
