@@ -67,3 +67,6 @@ REVISION CHANGE-CAUSE
 1     <none>
 2     kubectl set image deployment nginx nginx=nginx:1.17 --record=true
 master $
+
+
+problematic revision is always pulled out of revision list after rollback is done .
