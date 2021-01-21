@@ -21,3 +21,29 @@ metadata:
  
 Rolling Updates & Rollback
 ===========================
+
+* When you first create a deployment , it first triggers a rollout 
+* A new rollout creates a new deployment revision
+
+kubectl rollout status my-deployment   // check the status of the rollout of your deployment 
+
+To check the history of rollouts of a deployment we need :
+
+kubectl rollout history my-deployment
+
+
+* There are generally 2 Deployment strategy :
+==============================================
+
+(i.) Recreate/All at once (AWS elastic beanstalk analogy). // During period of updates app is unavailable (Not the default)
+(ii.) Rolling Update (Take down older instance & getting up newer instance one by one). default strategy. Good Approach .
+
+
+kubectl apply -f deploy-def.yml // updating chnages to a deployment 
+kubectl set image my-deployment nginx=nginx:1.9.1   // Another way , but in this case changes won't trcikle down to your yaml file !
+
+
+In case of issues with latest rollout , revert to previous deployment as 
+
+kubectl rollout undo my-deployment
+
