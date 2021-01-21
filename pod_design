@@ -1,1 +1,7 @@
+labels are a way to group kubernetes objects 
 
+
+metadata:
+      name:
+      labels:
+          color: blue
