@@ -51,3 +51,19 @@ In case of issues with latest rollout , revert to previous deployment as
 
 kubectl rollout undo my-deployment
 
+
+Using the --record flag:
+
+You would have noticed that the "change-cause" field is empty in the rollout history output. We can use the --record flag to save the command used to create/update a deployment against the revision number.
+
+master $ kubectl set image deployment nginx nginx=nginx:1.17 --record
+deployment.extensions/nginx image updated
+master $master $
+ 
+master $ kubectl rollout history deployment nginx
+deployment.extensions/nginx
+ 
+REVISION CHANGE-CAUSE
+1     <none>
+2     kubectl set image deployment nginx nginx=nginx:1.17 --record=true
+master $
