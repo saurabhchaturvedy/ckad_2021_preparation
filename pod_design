@@ -96,3 +96,15 @@ spec:
   kubectl logs <pod_name>
   
   * deleting the jobs also delete the pods created using the job
+  
+  
+  Cron-Job
+  <===================>
+  
+  
+  apiVersion: batch/v1beta1
+  
+  spec:
+    schedule: * * * * * (minute,hour,day-of-month,month,day-of-week)
+      jobTemplate:
+          <spec section of a job>
