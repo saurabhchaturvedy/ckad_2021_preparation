@@ -74,3 +74,25 @@ problematic revision is always pulled out of revision list after rollback is don
 
       Jobs
 <================>
+
+
+Kubernetes container exits after doing the work .
+
+To keep it running , we use restartPolicy
+
+spec:
+  containers:
+  
+  restartPolicy: (Always,Never) Default :  Always
+  
+  Job apiVersion : batch/v1
+      spec:
+        completions: 3
+        parallism: 3 (To run jobs/pods in parallel)
+        template:
+        
+  See output of Job :
+  
+  kubectl logs <pod_name>
+  
+  * deleting the jobs also delete the pods created using the job
