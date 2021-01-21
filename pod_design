@@ -7,3 +7,13 @@ metadata:
           color: blue
           
  kubectl get po --selector color=bue
+ 
+ annotations are required to get additional meta-info about the resource
+ 
+ metadata:
+       name:
+       labels:
+           color: blue
+           size: large
+       annotations:
+              buildVersion: 1.34
