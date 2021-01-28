@@ -1,1 +1,27 @@
+service types
+===============
 
+NodePort - makes a pod from node available with the help of a port 
+ClusterIP - Virtual IP inside the cluster
+LoadBalancer -
+
+
+spec:
+  type: NodePort
+  ports:
+     - targetPort:
+       port:
+       nodePort:
+  selector:
+        tier: frontend
+       
+kubectl get svc
+
+spec:
+   type: ClusterIP
+   ports:
+      - targetPort: 
+        port:
+   
+   selector:
+         app: selector
