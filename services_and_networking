@@ -25,3 +25,7 @@ spec:
    
    selector:
          app: selector
+         
+Ingress - helps you to access your service using a url . 
+
+Ingress is configured as - Ingress Controller (Nginx,HAProxy) + Ingress Resources (Configuration)
