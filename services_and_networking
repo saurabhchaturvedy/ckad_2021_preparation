@@ -71,3 +71,21 @@ spec:
             backend:
                  serviceName:
                  servicePort:
+                 
+ Ingress Configuration #3
+ ==================================
+ 
+ apiVersion:
+ 
+ kind:
+ 
+ metadata:
+       name:
+       
+ spec:
+    rules:
+      - host:
+        paths:
+         - backend:
+                serviceName:
+                servicePort:
