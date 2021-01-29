@@ -26,7 +26,7 @@ spec:
    selector:
          app: selector
          
-Ingress - helps you to access your service using a url . 
+Ingress - helps you to access your service using a single URL . (SSL+Routing)
 
 Ingress is configured as - Ingress Controller (Nginx,HAProxy) + Ingress Resources (Configuration)
 
