@@ -18,7 +18,7 @@ spec:
 kubectl get svc
 
 spec:
-   type: ClusterIP
+   type: ClusterIP // default service-type
    ports:
       - targetPort: 
         port:
