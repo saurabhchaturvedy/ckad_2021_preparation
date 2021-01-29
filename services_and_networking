@@ -31,3 +31,43 @@ Ingress - helps you to access your service using a single URL . (SSL+Routing)
 Ingress is configured as - Ingress Controller (Nginx,HAProxy) + Ingress Resources (Configuration)
 
 Ingress Controller =>. Deployment + Service + ConfigMap + Auth
+
+
+Ingress Configuration #1 
+==========================
+
+apiVersion:
+
+kind:
+
+metadata:
+      name:
+      
+spec:
+  backend:
+      serverName: wear-service
+      serverPort: 80
+      
+Ingress Configuration #2
+================================
+
+
+apiVersion:
+
+kind:
+
+metadata:
+      name:
+
+spec:
+   rules:
+     - http:
+         paths:
+          - path: /wear
+            backend:
+                 serviceName:
+                 servicePort:
+          - path: /watch
+            backend:
+                 serviceName:
+                 servicePort:
