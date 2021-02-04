@@ -63,3 +63,17 @@ Multi-container pod log filtering
 ================================
 
 kubectl logs -f <pod_name> <specific_container_name>
+
+
+
+
+Monitoring
+==============
+
+
+Node - > Kubelet -> contains CAdvisor => retrieves performance metrics for kubernetes pods
+
+kubectl top node // cpu and memory for each of the nodes
+
+kubectl top pod // performance metrics for pods
+
