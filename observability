@@ -51,3 +51,15 @@ livenessProbe:
             exec:
               command:
                   -
+
+
+Logging
+===========
+
+kubectl logs -f <pod_name>
+
+
+Multi-container pod log filtering
+================================
+
+kubectl logs -f <pod_name> <specific_container_name>
