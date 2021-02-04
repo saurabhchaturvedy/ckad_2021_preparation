@@ -1,1 +1,53 @@
 
+readinessProbe:
+          httpGet:
+              path:
+              port:
+              
+          initialDelaySeconds:   // after how many seconds to start the probe
+          
+          periodSeconds:         // how often to probe
+          
+          failureThreshold:       // default(3) 
+
+
+readinessProbe:
+          tcpSocket:
+                 port:
+
+
+
+
+readinessProbe:
+            exec:
+              command:
+                  -
+                  -
+                 
+                 
+                 
+                 
+                 
+livenessProbe:
+          httpGet:
+              path:
+              port:
+              
+          initialDelaySeconds:   // after how many seconds to start the probe
+          
+          periodSeconds:         // how often to probe
+          
+          failureThreshold:       // default(3) 
+
+
+livenessProbe:
+          tcpSocket:
+                 port:
+
+
+
+
+livenessProbe:
+            exec:
+              command:
+                  -
